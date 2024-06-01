@@ -52,6 +52,6 @@ int main() {
     double passProb = pass / pow(6, 4);
     double bustProb = bust / pow(6, 4);
 
-    cout << passProb << endl;
-    cout << bustProb << endl;
+    cout << "The probability of advancing is: " << passProb << endl;
+    cout << "The probability of busting is: " << bustProb << endl;
 }
