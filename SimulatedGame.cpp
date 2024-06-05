@@ -12,7 +12,7 @@ int main() {
                 white.insert(i);
                 white.insert(j);
                 white.insert(k);
-                int total_pass = 0;
+                int total_passes = 0;
 
                 for (int l = 0; l < 100000; l++) {
                     int pass = 0;
@@ -33,19 +33,25 @@ int main() {
                         int sum5 = throws[1] + throws[3];
                         int sum6 = throws[2] + throws[3];
 
-                        if (white.find(sum1) != white.end() || white.find(sum2) != white.end() || white.find(sum3) != white.end() || white.find(sum4) != white.end() || white.find(sum5) != white.end() || white.find(sum6) != white.end()) {
-                            //pass++;
-                        }
-
-                        else {
-                            bust = true;
+                        if (white.find(sum1) == white.end()) {
+                            if (white.find(sum2) == white.end()) {
+                                if (white.find(sum3) == white.end()) {
+                                    if (white.find(sum4) == white.end()) {
+                                        if (white.find(sum5) == white.end()) {
+                                            if (white.find(sum6) == white.end()) {
+                                                bust = true;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
 
-                    total_pass += pass;
+                    total_passes += pass;
                 }
 
-                cout << "With " << i << " " << j << " " << k << ": " << double(total_pass) / 100000.0 << endl;
+                cout << "With " << i << " " << j << " " << k << ": " << double(total_passes)/100000 << endl;
             }
         }
     }
