@@ -30,7 +30,7 @@ int main() {
             int sum5 = throw2 + throw4;
             int sum6 = throw3 + throw4;
 
-            // check if none of 6 different sums is not 2, 4, or 11
+            // check if none of 6 different sums is 2, 4, or 11
             // if so, set the bust flag to true
             if (sum1 != 2 && sum1 != 4 && sum1 != 11) {
                 if (sum2 != 2 && sum2 != 4 && sum2 != 11) {
